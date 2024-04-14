@@ -1,8 +1,14 @@
 import Container from "@/components/container/Container";
 import ProductItem from "@/components/productItem/ProductItem";
+import { getProducts } from "@/services/api";
 import Link from "next/link";
 
-const Store = () => {
+const Store = async () => {
+
+  // Axios
+  const data = await getProducts();
+  console.log(data)
+
   return (
     <div>
       <Container>
