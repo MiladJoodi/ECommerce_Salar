@@ -1,13 +1,13 @@
-export interface Products {
+export interface IProduct {
     id: number;
     title: string;
     price: number;
     description: string;
     category: string;
     image: string;
-    rating: ProductRating;
+    rating: IProductRating;
   }
-  export interface ProductRating {
+  export interface IProductRating {
     rate: number;
     count: number;
   }

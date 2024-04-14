@@ -1,14 +1,14 @@
 import Container from "@/components/container/Container";
 import ProductItem from "@/components/productItem/ProductItem";
 import { getProducts } from "@/services/api";
-import { Products } from "@/types/server";
+import { IProduct } from "@/types/server";
 import Link from "next/link";
 
 
 
 const Store = async () => {
   // Axios
-  const products: Products[] = await getProducts();
+  const products: IProduct[] = await getProducts();
   // console.log(products[0].rating);
 
   return (

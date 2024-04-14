@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Products } from "@/types/server";
+import { IProduct } from "@/types/server";
 
-type ProductItem = Products;
+type ProductItem = IProduct;
 
 const ProductItem = ({title, price, description, image}: ProductItem) => {
   return (
