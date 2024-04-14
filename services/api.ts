@@ -7,5 +7,5 @@ const client = axios.create({
 
 export async function getProducts (){
     const data = await client("/products")
-    return data;
+    return data.data;
 }

@@ -1,25 +1,28 @@
 import Image from "next/image";
+import { Products } from "@/types/server";
 
-const ProductItem = () => {
+type ProductItem = Products;
+
+const ProductItem = ({title, price, description, image}: ProductItem) => {
   return (
     <div className="shadow border rounded pb-2">
       <div className="">
         <Image
-          src="https://images.pexels.com/photos/1374510/pexels-photo-1374510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={image}
           width={1260}
           height={750}
           alt=""
-          className="rounded-t"
+          className="rounded-t h-[400px]"
         />
       </div>
       <div className="flex justify-between p-4">
-        <h3>عنوان محصول</h3>
-        <span>55$</span>
+        <span>{price}$</span>
+        <h3 className="line-clamp-1">{title}</h3>
       </div>
       {/* Description */}
-      <div className="px-4 mt-1">
+      <div className="px-4 mt-1 text-left">
             <p className="line-clamp-2">
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            {description}
             </p>
       </div>
       {/* Description */}
