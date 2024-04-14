@@ -20,6 +20,8 @@ const Single = ({ params }: { params: { id: string } }) => {
             />
 
             <Button 
+            className="mt-2 w-full !py-3"
+            variant= "primary"
             onClick={()=> alert("first")}>
               Add to Card
               </Button>
