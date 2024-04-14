@@ -18,7 +18,7 @@ const Store = async () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {products.map((item) => (
-            <Link href={`/product/${1}`} key={item.id}>
+            <Link href={`/product/${item.id}`} key={item.id}>
               <ProductItem {...item} />
             </Link>
           ))}

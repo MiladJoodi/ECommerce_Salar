@@ -5,7 +5,7 @@ type ProductItem = Products;
 
 const ProductItem = ({title, price, description, image}: ProductItem) => {
   return (
-    <div className="shadow border rounded pb-2">
+    <div className="shadow border rounded pb-2 text-left">
       <div className="">
         <Image
           src={image}
@@ -17,11 +17,11 @@ const ProductItem = ({title, price, description, image}: ProductItem) => {
       </div>
       <div className="flex justify-between p-4">
         <span>{price}$</span>
-        <h3 className="line-clamp-1">{title}</h3>
+        <h3 className="line-clamp-1 font-bold w-56 text-left">{title}</h3>
       </div>
       {/* Description */}
-      <div className="px-4 mt-1 text-left">
-            <p className="line-clamp-2">
+      <div className="px-4 mt-1">
+            <p className="line-clamp-2 text-gray-500">
             {description}
             </p>
       </div>
