@@ -18,9 +18,9 @@ const Navbar = () => {
           </ul>
 
           {/* Left */}
-          <div>
+          <Link href="/cart">
             <button>سبد خرید</button>
-          </div>
+          </Link>
           
         </div>
       </Container>
