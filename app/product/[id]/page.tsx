@@ -14,7 +14,7 @@ const Single = async ({ params }: { params: { id: string } }) => {
   return (
     <div>
       <Container>
-        <div className="h-96 shadow mt-4 grid grid-cols-12">
+        <div className="h- 96 shadow mt-4 grid grid-cols-12">
           <div className="bg-sky-200 col-span-2 p-4">
             <Image
               src={data.image}
