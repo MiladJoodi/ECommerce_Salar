@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
+import { ShoppingCartProvider } from "@/context/ShoppingCartContext";
 
 const vazirmatn = Vazirmatn({ subsets: ["latin"] });
 
@@ -17,10 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={vazirmatn.className}>
-        <Navbar />
-        {children}
+      <ShoppingCartProvider>
+        <body className={vazirmatn.className}>
+          <Navbar />
+          {children}
         </body>
+      </ShoppingCartProvider>
     </html>
   );
 }
